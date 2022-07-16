@@ -1,0 +1,44 @@
+.nav__up {
+  background-color: black;
+  width: 100%;
+  height: 12rem;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .nav__up .nav__up__conteiner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center; }
+  .nav__up .nav__up__logo {
+    width: 20rem; }
+  .nav__up .user {
+    position: absolute;
+    justify-content: flex-end;
+    width: 3.5rem;
+    height: 3.5rem;
+    border: 1px solid white;
+    border-radius: 50%;
+    right: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .nav__up .wallet {
+    position: absolute;
+    justify-content: flex-end;
+    width: 3.5rem;
+    height: 3.5rem;
+    border: 1px solid white;
+    border-radius: 50%;
+    right: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .nav__up .nav__icon {
+    width: 1.5rem; }
+
+.nav {
+  background-color: #1f1f1f;
+  width: 100%;
+  height: 4rem; }
