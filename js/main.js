@@ -1,5 +1,60 @@
 console.log("BTK Motors")
 
+const accesoriosArray = [];
+
+
+class accesorio {
+constructor(nombre, marca, precio){
+this.nombre = nombre,
+this.marca = marca,
+this.precio = precio
+}
+}
+
+console.log(accesoriosArray)
+
+const casco = new accesorio("casco", "UFO", 55000)
+accesoriosArray.push(casco)
+
+const pechera = new accesorio("pechera", "FOX", 43000)
+accesoriosArray.push(pechera)
+
+const botas = new accesorio("botas", "GAERNE", 76000)
+accesoriosArray.push(botas)
+
+const guantes = new accesorio("guantes", "THOR", 11000)
+accesoriosArray.push(guantes)
+
+
+
+const stock = prompt("Que accesorio quieres saber si tenemos disponible?")
+
+if(stock == "casco"){
+    console.log(accesoriosArray[0])
+    alert("Tenemos Casco disponible!")
+} else  if(stock == "pechera"){
+    console.log(accesoriosArray[1])
+    alert("Tenemos Pechera disponible!")
+} else  if(stock == "pechera"){
+    console.log(accesoriosArray[1])
+    alert("Tenemos Pechera disponible!")
+} else  if(stock == "botas"){
+    console.log(accesoriosArray[2])
+    alert("Tenemos Botas disponible!")
+} else  if(stock == "guantes"){
+    console.log(accesoriosArray[3])
+    alert("Tenemos Guantes disponible!")
+} else {
+    alert("No encontramos ese accesorio disponible")
+}
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////
 
 alert("Bienvenidos a BTK Motors!")
 
@@ -171,3 +226,7 @@ if(edad >= 18){
 } else{
     alert("Lo siento, eres menor de edad")
 }
+
+
+
+
