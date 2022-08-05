@@ -2,7 +2,6 @@ console.log("BTK Motors")
 
 const accesoriosArray = [];
 
-
 class accesorio {
 constructor(nombre, marca, precio){
 this.nombre = nombre,
