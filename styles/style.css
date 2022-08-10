@@ -31,6 +31,10 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center; }
   .nav__up .nav__up__logo {
     width: 20rem; }
+  .nav__up .nav__up__p {
+    color: red;
+    position: absolute;
+    right: 15rem; }
   .nav__up .user {
     position: absolute;
     justify-content: flex-end;
