@@ -34,6 +34,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        &:hover {
+            border: 1px solid red;
+        }
     }
     .wallet{
         position: absolute;
@@ -46,6 +50,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        &:hover {
+            border: 1px solid red;
+        }
     }
     .nav__icon{
         width: 1.5rem;
@@ -67,3 +75,4 @@
     --bs-btn-hover-bg: red;
     --bs-btn-hover-border-color: red;
 }
+

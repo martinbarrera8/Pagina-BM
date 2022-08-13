@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  
+
     <header>
 
         <nav class="nav__up">
@@ -19,14 +19,18 @@
 
                 <img class="nav__up__logo" src="./image/logoBTK.svg" alt="Logo BTK">
 
-                <p id="nombreUser" class="nav__up__p"></p>
+                <p id="nombreUser" class="nav__up__p">Iniciar sesion</p>
 
                 <div class="user">
+                  <button id="boton__user">
                     <img class="nav__icon" src="./image/user.svg" alt="Icon user">
+                  </button>
                 </div>
 
                 <div class="wallet">
+                  <button>
                     <img class="nav__icon" src="./image/carrito.svg" alt="Icon wallet">
+                  </button>
                 </div>
 
             </div>
@@ -128,6 +132,7 @@
             <div class="box__btn">
               <button>
               <img class="btn__img" src="./image/carrito.svg" alt="Carrito">
+              <img class="btn__img__red" src="./image/sumarred.svg" alt="Sumar">
               </button>
             </div>
 
@@ -149,8 +154,18 @@
 
     </footer>
 
+    <div id="modal__conteiner" class="modal__conteiner"> 
 
-    
+        <div id="my__modal" class="my__modal">
+          <h3 class="my__modal__h3">Inicio de sesion</h3>
+
+          <hr>
+
+          <button id="boton__close" class="cerrar__modal">Cerrar</button>
+        </div>
+      </div>
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>  
     <script src="./js/main.js"></script> 
 </body>
