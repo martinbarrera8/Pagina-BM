@@ -17,6 +17,15 @@ cerrarModal.addEventListener('click',() => {
     modalConteiner.classList.remove('modal__conteiner-active')
 })
 
+//FORM MODAL
+
+const inputNombre = document.querySelector('#input__nombre')
+const inputApellido = document.querySelector('#input__apellido')
+const inputGmail = document.querySelector('#input__gmail')
+const btnSubmit = document.querySelector('#btn__submit')
+
+//FIN FORM MODAL
+
 //FIN MODAL
 
 

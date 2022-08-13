@@ -189,11 +189,13 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 15px;
   display: flex;
   justify-content: center;
-  flex-direction: column; }
+  flex-direction: column;
+  align-items: center; }
 
 .my__modal__h3 {
   color: #5f5e5e;
-  text-align: center; }
+  text-align: center;
+  margin-top: 2rem; }
 
 .cerrar__modal {
   background-color: #c7c7c7;
@@ -205,6 +207,12 @@ h1, h2, h3, h4, h5, h6 {
 .modal__conteiner-active {
   opacity: 1;
   visibility: visible; }
+
+.form__modal {
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column; }
 
 .footer__conteiner {
   background-color: black;

@@ -130,10 +130,12 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    align-items: center;
 }
 .my__modal__h3{
     color: rgb(95, 94, 94);
     text-align: center;
+    margin-top: 2rem;
 }
 .cerrar__modal{
     background-color: rgb(199, 199, 199);
@@ -147,5 +149,17 @@
     opacity: 1;
     visibility: visible;
 }
+
+
+//FORM MODAL
+
+.form__modal{
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+//FIN FORM MODAL
 
 //FIN MODAL
