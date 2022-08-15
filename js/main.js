@@ -19,10 +19,26 @@ cerrarModal.addEventListener('click',() => {
 
 //FORM MODAL
 
+const tituloNombre = document.querySelector('#title__nombre')
+
 const inputNombre = document.querySelector('#input__nombre')
 const inputApellido = document.querySelector('#input__apellido')
 const inputGmail = document.querySelector('#input__gmail')
 const btnSubmit = document.querySelector('#btn__submit')
+
+const formulario = document.querySelector('#formulario')
+
+formulario.addEventListener('submit', (event) => {
+event.preventDefault()
+
+const nombre = inputNombre.value
+const apellido = inputApellido.value 
+
+nombre__user.innerHTML = `Bienvenido ${nombre} ${apellido}`
+
+console.log('ENVIAR')
+})
+
 
 //FIN FORM MODAL
 
