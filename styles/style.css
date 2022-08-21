@@ -110,6 +110,15 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid rgba(128, 128, 128, 0.435);
   text-align: center; }
 
+.card__body {
+  width: 19rem;
+  height: 26rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center; }
+
 .section__productos {
   display: flex;
   align-items: center;
@@ -140,13 +149,13 @@ h1, h2, h3, h4, h5, h6 {
 .card__p {
   width: 100%;
   position: absolute;
-  top: 18.5rem;
+  top: 18rem;
   font-size: 1.3rem;
   color: red; }
 
 .box__btn {
   position: absolute;
-  top: 21rem;
+  top: 20.5rem;
   background-color: red;
   width: 3rem;
   height: 3rem;
@@ -195,13 +204,14 @@ h1, h2, h3, h4, h5, h6 {
 .my__modal__h3 {
   color: #5f5e5e;
   text-align: center;
-  margin-top: 2rem; }
+  margin-bottom: 4rem; }
 
 .cerrar__modal {
-  background-color: #c7c7c7;
-  width: 8rem;
-  height: 2.5rem;
-  border-radius: 10px;
+  color: white;
+  background-color: red;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
   align-items: center; }
 
 .modal__conteiner-active {
@@ -209,10 +219,48 @@ h1, h2, h3, h4, h5, h6 {
   visibility: visible; }
 
 .form__modal {
-  margin-top: 4rem;
+  margin-bottom: 6rem;
   display: flex;
   align-items: center;
   flex-direction: column; }
+
+.input__modal {
+  width: 16rem;
+  margin: 1rem 0rem;
+  border: none;
+  border-bottom: 1px solid black; }
+
+.input__btn {
+  background-color: rgba(99, 208, 212, 0.5);
+  width: 6rem;
+  height: 2.25rem;
+  margin: 1rem 0rem;
+  border-radius: 50px; }
+
+.widget__conteiner {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 23rem; }
+
+.suma {
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.3);
+  padding: 0.5rem; }
+  .suma:active {
+    color: red; }
+
+.resta {
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.3);
+  padding: 0.5rem; }
+  .resta:active {
+    color: red; }
+
+.cantidad {
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.3); }
 
 .footer__conteiner {
   background-color: black;

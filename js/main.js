@@ -1,6 +1,4 @@
 
-//HACER LOGIN CON MODAL
-
 //MODAL  
 
 const modalConteiner = document.querySelector('#modal__conteiner')
@@ -39,7 +37,6 @@ nombre__user.innerHTML = `Bienvenido ${nombre} ${apellido}`
 console.log('ENVIAR')
 })
 
-
 //FIN FORM MODAL
 
 //FIN MODAL
@@ -47,14 +44,9 @@ console.log('ENVIAR')
 
   //Productos -------------------------------------------------------------------
 
-class producto {
-    constructor(img, nombre, precio){
-    this.img = img,
-    this.nombre = nombre,
-    this.precio = precio
-    }
-    };
-    
+    //CARRITO
+  let carrito =  new Carrito('Stefano')
+
     let baseDeDatos = [];
     
     baseDeDatos.push(new producto ('<img class="card__img" src="./image/casco.jpeg" alt="Casco">', "Casco Moto Cross Enduro Ufo Onyx Rapture Winnersport", 56000))
@@ -63,19 +55,23 @@ class producto {
     baseDeDatos.push(new producto ('<img class="card__img" src="./image/botas.jpeg" alt="Botas">', "Botas Alpinestars Tech 8 Rs", 102500))
     
     const section = document.querySelector("#section__productos")
-    const section1 = document.querySelector("#section__productos1")
     let temp = document.querySelector("template")
-    let card = temp.content.querySelector("div")
+    let card = temp.content.querySelector("div.card")
     
+    render(baseDeDatos)
     
-    baseDeDatos.forEach((elemt) => {
-        let cardClonada = card.cloneNode(card, true)
-        cardClonada.children[0].innerHTML = elemt.img
-        cardClonada.children[1].innerText = elemt.nombre
-        cardClonada.children[2].innerText = "$" + elemt.precio
-    
-        section.appendChild(cardClonada)
-    })
+    function render(array) {
+        array.forEach((elemt) => {
+            let cardClonada = card.cloneNode(card, true)
+            cardBody = cardClonada.querySelector('.card__body')
+            cardBody.children[0].innerHTML = elemt.img
+            cardBody.children[1].innerText = elemt.nombre
+            cardBody.children[2].innerText = "$" + elemt.precio
+        
+            section.appendChild(cardClonada)
+            new CardWidget (cardClonada, elemt)
+        })
+    }
 
     //Final Productos -------------------------------------------------------------------
     
