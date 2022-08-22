@@ -237,6 +237,12 @@ h1, h2, h3, h4, h5, h6 {
   margin: 1rem 0rem;
   border-radius: 50px; }
 
+#btn__change {
+  margin: 1rem;
+  color: #5f5e5e; }
+  #btn__change:hover {
+    color: blue; }
+
 .widget__conteiner {
   display: flex;
   justify-content: space-around;

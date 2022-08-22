@@ -31,6 +31,29 @@ event.preventDefault()
 
 const nombre = inputNombre.value
 const apellido = inputApellido.value 
+const mail = inputGmail.value
+
+//LOCAL STORAGE
+
+let usuarioLocal = localStorage.getItem('usuario')
+
+const pedirUsuarioLocal = () => {
+  usuarioLocal = mail
+  localStorage.setItem('usuario', usuarioLocal)
+}
+
+  pedirUsuarioLocal()
+
+const btnChangeUser = document.querySelector('#btn__change')
+
+btnChangeUser.addEventListener('click', () => {
+  localStorage.removeItem('usuario')
+  modalConteiner.classList.remove('modal__conteiner-active')
+})
+
+//FINAL LOCAL STORAGE
+
+
 
 nombre__user.innerHTML = `Bienvenido ${nombre} ${apellido}`
 
@@ -38,6 +61,8 @@ console.log('ENVIAR')
 })
 
 //FIN FORM MODAL
+
+
 
 //FIN MODAL
 
@@ -76,3 +101,4 @@ console.log('ENVIAR')
     //Final Productos -------------------------------------------------------------------
     
     
+  

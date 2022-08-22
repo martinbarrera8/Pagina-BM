@@ -182,6 +182,13 @@
     margin: 1rem 0rem;
     border-radius: 50px;
 }
+#btn__change{
+    margin: 1rem;
+    color: rgb(95, 94, 94);
+    &:hover{
+        color: blue;
+    }
+}
 
 //FIN FORM MODAL
 
