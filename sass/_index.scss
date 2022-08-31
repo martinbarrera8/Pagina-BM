@@ -1,25 +1,20 @@
-
-.conteiner__carousel{
+//CAROUSEL
+    .conteiner__carousel{
     display: flex;
     width: 100%;
     height: 100%;
-}
-.conteiner__h3{
-    width: 100%;
-    height: 4rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-/* -- PRODUCTOS -------------------------------- */
-.conteiner__section{
+    }
+//FINAL CAROUSEL
+
+//* -- PRODUCTOS -------------------------------- */
+    .conteiner__section{
     background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+    }
 
-}
-.card{
+    .card{
     margin: 1rem;
     background-color: white;
     width: 19rem;
@@ -32,6 +27,7 @@
     border: 1px solid rgba(128, 128, 128, 0.435);
     text-align: center;
     }
+
     .card__body{
     width: 19rem;
     height: 26rem;
@@ -49,7 +45,7 @@
         flex-wrap: nowrap;
     }
 
-.conteiner__img{
+    .conteiner__img{
     position: absolute;
     top: 0.8rem;
     display: flex;
@@ -60,27 +56,28 @@
     background-color: white;
     border-radius: 10px;
     border: 1px solid rgba(128, 128, 128, 0.435);
-}
-.card__img{
-    width: 10rem;
-}
+    }
 
-.card__h4{
+    .card__img{
+    width: 10rem;
+    }
+
+    .card__h4{
     position: absolute;
     top: 13.5rem;
     width: 100%;
     font-size: 1rem;
-}
+    }
 
-.card__p{
+    .card__p{
     width: 100%;
     position: absolute;
     top: 18rem;
     font-size: 1.3rem;
     color: red;
-}
+    }
 
-.box__btn{
+    .box__btn{
     position: absolute;
     top: 20.5rem;
     background-color: red;
@@ -91,139 +88,132 @@
     align-items: center;
     justify-content: center;
 
-    .btn__img{
-        width: 1.5rem;
-    }
-    .btn__img__red{
-        display: none;
-        width: 1.5rem;
-    }
-
-    &:hover{
-
-        background-color: white;
-        border: 1px solid red;
-
         .btn__img{
-            display: none;
-        }
-        .btn__img__red{
-            display: flex;
             width: 1.5rem;
         }
+        .btn__img__red{
+            display: none;
+            width: 1.5rem;
+        }
+
+            &:hover{
+
+                background-color: white;
+                border: 1px solid red;
+
+                .btn__img{
+                    display: none;
+                }
+                .btn__img__red{
+                    display: flex;
+                    width: 1.5rem;
+                }
+            }
     }
-}
-/* -- PRODUCTOS -------------------------------- */
+//* -- FINAL PRODUCTOS -------------------------------- */
 
-//MODAL
 
-.modal__conteiner{
-    background-color: rgba(0, 0, 0, 0.4);
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    inset: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+//MODAL CARRITO
+    .modal__carrito__conteiner{
+        background-color: rgba(0, 0, 0, 0.4);
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        inset: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-    opacity: 0;
-    visibility: hidden;
-    transition: all .2s ease-in-out;
-}
-.my__modal{
-    width: 32rem;
-    height: 34rem;
-    background-color: white;
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-.my__modal__h3{
-    color: rgb(95, 94, 94);
-    text-align: center;
-    margin-bottom: 4rem;
-}
-.cerrar__modal{
-    color: white;
-    background-color: red;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-    align-items: center;
-}
-
-.modal__conteiner-active{
-    opacity: 1;
-    visibility: visible;
-}
-
-//FORM MODAL
-
-.form__modal{
-    margin-bottom: 6rem;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-
-}
-.input__modal{
-    width: 16rem;
-    margin: 1rem 0rem;
-    border: none;
-    border-bottom: 1px solid black;
-}
-.input__btn{
-    background-color: rgba(99, 208, 212, 0.5);
-    width: 6rem;
-    height: 2.25rem;
-    margin: 1rem 0rem;
-    border-radius: 50px;
-}
-#btn__change{
-    margin: 1rem;
-    color: rgb(95, 94, 94);
-    &:hover{
-        color: blue;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .2s ease-in-out;
     }
-}
-
-//FIN FORM MODAL
-
-//FIN MODAL
+    .my__modal__carrito{
+        width: 46rem;
+        height: 52rem;
+        background-color: white;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .my__modal__carrito__h3{
+        color: rgb(95, 94, 94);
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+    .modal__carrito__conteiner-active{
+        opacity: 1;
+        visibility: visible;
+    }
+//FIN MODAL CARRITO
 
 
 //CONTADOR DE PRODUCTOS
 
-.widget__conteiner{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    margin-top: 23rem;
-}
+    .widget__conteiner{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+        margin-top: 23rem;
+    }
 
-.suma{
-    font-size: 0.8rem;
-    color: rgba(0, 0, 0, 0.3);
-    padding: 0.5rem;
-    &:active{
-        color: red;
+    .suma{
+        font-size: 0.8rem;
+        color: rgba(0, 0, 0, 0.3);
+        padding: 0.5rem;
+        &:active{
+            color: red;
+        }
     }
-}
-.resta{
-    font-size: 0.8rem;
-    color: rgba(0, 0, 0, 0.3);
-    padding: 0.5rem;
-    &:active{
-        color: red;
+    .resta{
+        font-size: 0.8rem;
+        color: rgba(0, 0, 0, 0.3);
+        padding: 0.5rem;
+        &:active{
+            color: red;
+        }
     }
-}
-.cantidad{
-    font-size: 1rem;
-    color: rgba(0, 0, 0, 0.3);
-}
+    .cantidad{
+        font-size: 1rem;
+        color: rgba(0, 0, 0, 0.3);
+    }
 
 //FIN CONTADOR DE PRODUCTOS
+
+
+//CUADRO DEL MENSAJE DE PRODUCTO AGREGADO
+
+    .box__message{
+        background-color: rgb(203, 3, 3);
+        padding: 1.5rem 1rem;
+        width: 14rem;
+        height: 12rem;
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .2s ease-in-out;
+
+        .message__p{
+            font-size: 1.2rem;
+            text-align: center;
+            color: white;
+        }
+    }
+
+    .box__message-active{
+        opacity: 1;
+        visibility: visible;
+    }
+
+//CUADRO DEL MENSAJE DE PRODUCTO AGREGADO
+
+

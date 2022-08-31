@@ -15,3 +15,13 @@ class Carrito {
         }
     }
 }
+
+
+const ulCarrito = document.querySelector('#ul__carrito')
+
+const listaProductos = document.createElement('li')
+listaProductos.innerText = Object.values(carrito)
+
+ulCarrito.innerHTML = `
+<li> ${listaProductos} </li>
+`

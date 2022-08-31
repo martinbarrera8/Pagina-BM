@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/style.css">
+    <script defer src="./assets/productos.js"></script> 
+    <script defer src="./assets/modal.js"></script> 
+    <script defer src="./js/main.js"></script> 
     <title>Inicio</title>
 </head>
 
@@ -28,8 +31,9 @@
                 </div>
 
                 <div class="wallet">
-                  <button>
+                  <button id="boton-carrito">
                     <img class="nav__icon" src="./image/carrito.svg" alt="Icon wallet">
+                    <span id="contadorCarrito">0</span>
                   </button>
                 </div>
 
@@ -38,37 +42,20 @@
         </nav>
 
         <nav class="navbar navbar-expand-lg nav">
+
             <div class="container-fluid">
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      
+                  <form class="d-flex" role="search">
+                      <input class="form-control me-2" type="search" placeholder="Que buscas?" aria-label="Search">
+                      <button class="btn btn-outline-success" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                      <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                      </svg></button>
+                  </form> 
 
-                  <li class="nav-item">
-                    <a class="nav-link nav__a" aria-current="page" href="#">Inicio</a>
-                  </li>
-
-                    <a class="nav-link nav__a" href="./secciones/accesorios.html" role="button">
-                      Accesorios
-                    </a>
-
-                  <li class="nav-item dropdown">
-                    <a class="nav-link nav__a" href="./secciones/indumentaria.html" role="button">
-                      Indumentaria
-                    </a>
-                  </li>
-
-                  <li class="nav-item">
-                    <a class="nav-link nav__a" href="./secciones/contacto.html">Contacto</a>
-                  </li>
-                </ul>
-                
-                <form class="d-flex" role="search">
-                  <input class="form-control me-2" type="search" placeholder="Que buscas?" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                  </svg></button>
-                </form>
               </div>
             </div>
+
           </nav>
 
     </header>
@@ -83,13 +70,13 @@
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="./image/img1.jpg" class="d-block w-100" alt="...">
+              <img src="./image/portada1.jpg" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-              <img src="./image/Sin-título-1.jpg" class="d-block w-100" alt="...">
+              <img src="./image/portada2.jpg" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-              <img src="./image/Sin-título-2.jpg" class="d-block w-100" alt="...">
+              <img src="./image/portada3.jpg" class="d-block w-100" alt="...">
             </div>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -105,45 +92,25 @@
 
       </div>
 
+      <section id="contenedor-productos">
 
-      <div class="conteiner__h3">
-        <h3 class="index__h3">PRODUCTO DESTACADOS</h3>
-      </div>
-
-      <!-- PRODUCTOS --------------------------------------------------->
-
-      <div class="conteiner__section">
-        <section class="section__productos" id="section__productos">
-
-        </section>
-    </div>
-
-    <template>
-        <div class="card">
-          <div class="card__body">
-                <div class="conteiner__img">
-                </div>
-                <h4 class="card__h4">Producto</h4>
-                <p class="card__p">Precio</p>
-                
-                <div class="widget__conteiner">
-                    <div class="box__btn">
-                      <button id="compra">
-                        <img class="btn__img" src="./image/carrito.svg" alt="Carrito">
-                        <img class="btn__img__red" src="./image/sumarred.svg" alt="Sumar">
-                      </button>
-                    </div>
-                        <button class="suma">+</button>
-                          <p class="cantidad" id="cantidad">xxxx</p>
-                      <button class="resta">-</button>
-                    </div>
+      </section>
+  
+      <div class="modal-contenedor">
+          <div class="modal-carrito">
+              <h2>Carrito</h2>
+              <button id="carritoCerrar"><img class="carritoCerrar-svg" src="./image/cancelarblanco.svg" alt="cerrar"></button>
+              <div id="carrito-contenedor">
+                  <!-- <div class="productoEnCarrito">
+                      <p>Buzo 1</p>
+                      <p>Precio: $1200</p>
+                      <button class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
+                  </div> -->
+              </div>
+              <p class="precioTotal">Precio total: $<span id="precioTotal">0</span></p>
+              <button id="vaciar-carrito">VACIAR</button>
           </div>
-        </div>
-
-        </div>
-    </template>
-
-    <!-- FINAL PRODUCTOS --------------------------------------------------->
+      </div>
 
     </main>
 
@@ -159,7 +126,7 @@
     </footer>
 
 
-    <!----- MODAL ------------------------------------------------>
+    <!----- MODAL USUARIO ------------------------------------------------>
 
     <div id="modal__conteiner" class="modal__conteiner"> 
 
@@ -174,17 +141,23 @@
           
           </form>
           <button id="btn__change">Cambiar usuario</button>
-          <button id="boton__close" class="cerrar__modal">x</button>
+          <button id="boton__close" class="cerrar__modal"><img class="boton-close-svg" src="./image/cancelarblanco.svg" alt="cerrar"></button>
         </div>
       </div>
 
-          <!----- FINAL MODAL------------------------------------------------>
+    <!----- FINAL MODAL USUARIO ------------------------------------------------>
+
+
+    <!----- CUADRO DEL MENSAJE DE PRODUCTO AGREGADO -------->
+
+      <!-- <div id="box__message" class="box__message">
+        <p class="message__p">El producto fue agregado al carrito</p>
+      </div> -->
+      
+    <!----- FINAL CUADRO DEL MENSAJE DE PRODUCTO AGREGADO -------->
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script> 
-    <script src="./assets/producto.js"></script> 
-    <script src="./assets/card-widget.js"></script> 
-    <script src="./assets/carrito.js"></script> 
-    <script src="./js/main.js"></script> 
 </body>
 </html>
