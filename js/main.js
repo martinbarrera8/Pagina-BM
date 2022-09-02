@@ -1,12 +1,14 @@
 
-// ----- MODAL USUARIO
+// -- MODAL USUARIO ---------------------------------------------------------------------------------------- 
 
+//SELECCION DE LOS ID DEL MODAL EN EL HTML
 const modalConteiner = document.querySelector('#modal__conteiner')
 const modal = document.querySelector('#modal')
-
+// BOTONES PARA ABRIR O CERRAR EL MODAL
 const abrirModal = document.querySelector('#boton__user')
 const cerrarModal = document.querySelector('#boton__close')
 
+//EVENTO PARA ABRIR O CERRAR EL MODAL
 abrirModal.addEventListener('click',() => {
     modalConteiner.classList.add('modal__conteiner-active')
 })
@@ -16,10 +18,11 @@ cerrarModal.addEventListener('click',() => {
 })
 
 
-// --- FORM MODAL
+// -- FORMULARIO MODAL USUARIO -----------------------------------------------------------------------------------
 
 const tituloNombre = document.querySelector('#title__nombre')
 
+//SELECCION DE INPUTS DE LOS CAMPOS DE DATOS
 const inputNombre = document.querySelector('#input__nombre')
 const inputApellido = document.querySelector('#input__apellido')
 const inputGmail = document.querySelector('#input__gmail')
@@ -27,6 +30,7 @@ const btnSubmit = document.querySelector('#btn__submit')
 
 const formulario = document.querySelector('#formulario')
 
+//EVENTO PARA ENVIAR LA INFORMACION RELLENADA EN EL ANTERIOR PASO Y GUARDAR EN EL HTML Y EN LOCALSTORAGE
 formulario.addEventListener('submit', (event) => {
 event.preventDefault()
 
@@ -34,7 +38,7 @@ const nombre = inputNombre.value
 const apellido = inputApellido.value 
 const mail = inputGmail.value
 
-// - LOCAL STORAGE
+// --  LOCAL STORAGE --------------------------------------------
 
 let usuarioLocal = localStorage.getItem('usuario')
 
@@ -46,7 +50,6 @@ const pedirUsuarioLocal = () => {
   pedirUsuarioLocal()
 
 const btnChangeUser = document.querySelector('#btn__change')
-const inputModal = document.querySelector('.input__modal')
 
 btnChangeUser.addEventListener('click', () => {
   localStorage.removeItem('usuario')
@@ -54,7 +57,7 @@ btnChangeUser.addEventListener('click', () => {
   nombre__user.innerHTML = `Iniciar Sesion`
 })
 
-// - FINAL LOCAL STORAGE
+// -- FINAL LOCAL STORAGE ---------------------------------------
 
 
 nombre__user.innerHTML = `Bienvenido ${nombre} ${apellido}`
@@ -62,25 +65,23 @@ nombre__user.innerHTML = `Bienvenido ${nombre} ${apellido}`
 console.log('ENVIAR')
 })
 
-// --- FIN FORM MODAL
+// -- FINAL FORMULARIO MODAL USUARIO -----------------------------------------------------------------------------
 
-// ----- FINAL MODAL USUARIO
+// -- FINAL MODAL USUARIO ---------------------------------------------------------------------------------------- 
 
 
 
-// CARRITO MODAL
+// -- CARRITO MODAL ----------------------------------------------------------------------------------------------
 
 const contenedorProductos = document.getElementById('contenedor-productos')
 
-//TERCER PASO
 
 const contenedorCarrito = document.getElementById('carrito-contenedor')
-//SEXTO PASO
+
 const botonVaciar = document.getElementById('vaciar-carrito')
-//SEXTIMO PASO, MODIFICAR LOS CONTADORES
+// MODIFICACION DEL CONTADOR
 const contadorCarrito = document.getElementById('contadorCarrito')
 
-//OCTAVO PASO
 const cantidad = document.getElementById('cantidad')
 const precioTotal = document.getElementById('precioTotal')
 const cantidadTotal = document.getElementById('cantidadTotal')
@@ -93,13 +94,14 @@ document.addEventListener('DOMContentLoaded', () => {
         actualizarCarrito()
     }
 })
-//SEXTO PASO
+
+
 botonVaciar.addEventListener('click', () => {
     carrito.length = 0
     actualizarCarrito()
 })
 
-//PRIMER PRIMER PASO, INYECTAR EL HTML
+//INTRODUCCION DEL PRODUCTO EN EL HTML
 stockProductos.forEach((producto) => {
     const div = document.createElement('div')
     div.classList.add('producto')
@@ -116,26 +118,36 @@ stockProductos.forEach((producto) => {
     `
     contenedorProductos.appendChild(div)
 
-    //2 - SEGUNDO PASO, LUEGO DE QUE INSERTEMOS EL HTML EN EL DOM:
+    //INTRODUCCION DEL HTML AL DOM:
     const boton = document.getElementById(`agregar${producto.id}`)
     //Por cada elemento de mi array, creo un div, lo cuelgo, le pongo un id particular, una vez colgado
     //le hago un get element by id (el de agregar) Obtengo el elemento y a dicho elemento le agregamos
     //el add event listener
 
+    //
+
     boton.addEventListener('click', () => {
         //esta funcion ejecuta el agregar el carrito con la id del producto
         agregarAlCarrito(producto.id)
+
+        Swal.fire({
+          title: 'Producto agregado al carrito',
+          icon: 'success',
+          iconColor: 'red',
+          position: 'bottom-end',
+          timer: '2000',
+          showConfirmButton: false,
+          toast: true,
+        })
         //
     })
 })
-
-// 1- PRIMER PASO
 
 //AGREGAR AL CARRITO
 const agregarAlCarrito = (prodId) => {
 
     //PARA AUMENTAR LA CANTIDAD Y QUE NO SE REPITA
-    const existe = carrito.some (prod => prod.id === prodId) //comprobar si el elemento ya existe en el carro
+    const existe = carrito.some (prod => prod.id === prodId) //comprobar si el elemento ya existe en el carrito
 
     if (existe){ //SI YA ESTÁ EN EL CARRITO, ACTUALIZAMOS LA CANTIDAD
         const prod = carrito.map (prod => { //creamos un nuevo arreglo e iteramos sobre cada curso y cuando
@@ -157,7 +169,7 @@ const agregarAlCarrito = (prodId) => {
 //agregarAlCarrito(1) //Le pasamos el ID por parametro. Tenemos que asigarle como evento esta funcion al boton
 //con el id de su producto correspondiente
 
-// 5 - QUINTO PASO
+
 const eliminarDelCarrito = (prodId) => {
     const item = carrito.find((prod) => prod.id === prodId)
 
@@ -171,8 +183,7 @@ const eliminarDelCarrito = (prodId) => {
 }
 
 const actualizarCarrito = () => {
-    //4- CUARTO PASO
-    //LOS APPENDS SE VAN ACUMULANDO CON LO QE HABIA ANTES
+    //LOS APPENDS SE VAN ACUMULANDO CON LO QUE HABIA ANTES
     contenedorCarrito.innerHTML = "" //Cada vez que yo llame a actualizarCarrito, lo primero q hago
     //es borrar el nodo. Y despues recorro el array lo actualizo de nuevo y lo rellena con la info
     //actualizado
@@ -194,12 +205,12 @@ const actualizarCarrito = () => {
         localStorage.setItem('carrito', JSON.stringify(carrito))
 
     })
-    //SEPTIMO PASO
+
     contadorCarrito.innerText = carrito.length // actualizamos con la longitud del carrito.
-    //OCTAVO PASO
     console.log(carrito)
     precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.cantidad * prod.precio, 0)
     //Por cada producto q recorro en mi carrito, al acumulador le suma la propiedad precio, con el acumulador
     //empezando en 0.
-
 }
+
+// -- FINAL CARRITO MODAL ----------------------------------------------------------------------------------------
