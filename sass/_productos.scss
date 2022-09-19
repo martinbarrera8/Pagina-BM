@@ -1,7 +1,7 @@
 //Caja contenedor de los productos
 #contenedor-productos {
     max-width: 1400px;
-    margin: 60px auto;
+    margin: 1.5rem auto;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -38,7 +38,7 @@
     font-weight: 500;
     font-size: 1.3rem;
     color: red;
-    margin-top: 20rem;
+    margin-top: 19.5rem;
 }
 //Boton de comprar
 .boton-agregar{
@@ -50,7 +50,7 @@
     align-items: center;
     justify-content: center;
     position: absolute;
-    margin-top: 22.2rem;
+    margin-top: 22rem;
     
         .btn-img{
             width: 1.5rem;

@@ -49,7 +49,7 @@
 .modal-carrito h2 {
     width: 4rem;
     font-weight: 600;
-    color: #888888;
+    color: black;
     margin: 0.5rem 0rem;
 }
 .modal-carrito #carritoCerrar {
@@ -143,6 +143,14 @@
     height: 2.2rem;
     border: 1.5px solid red;
     border-radius: 15px;
+    transition: all .2s ease-in-out;
+
+    &:hover{
+        background-color: red;
+
+         //FUENTE
+        color: white;
+    }
 }
 
 //Boton cerrar carrito 
@@ -160,3 +168,88 @@
 .carritoCerrar-svg {
     width: 1rem;
 }
+
+// --------------------------- MODAL DE ALERTA DE VACIAR CARRITO
+
+//Contenedor del modal vaciar carrito
+.swal2-container.swal2-center>.swal2-popup{
+    border-radius: 30px;
+}
+
+
+//Boton Si, vaciar
+.swal2-styled.swal2-confirm{
+    border: 1px solid red;
+    background-color: white;
+    border-radius: 20px;
+    transition: all .2s ease-in-out;
+
+    //FUENTE
+    color: red;
+
+    &:hover{
+        background-color: red;
+
+         //FUENTE
+        color: white;
+    }
+
+}
+
+//Boton No, cancelar
+
+.swal2-styled.swal2-cancel{
+    border: 1px solid gray;
+    background-color: white;
+    border-radius: 20px;
+    transition: all .2s ease-in-out;
+
+     //FUENTE
+     color: gray;
+
+     &:hover{
+        background-color: gray;
+
+         //FUENTE
+        color: white;
+    }
+}
+
+.swal2-styled.swal2-confirm:focus{
+    box-shadow: none;
+}
+
+.swal2-styled.swal2-cancel:focus{
+    box-shadow: none;
+}
+
+// ---------------------  FINAL MODAL DE ALERTA DE VACIAR CARRITO
+
+
+// ---------------------  MODAL DE ALERTA DE FINALIZAR LA COMPRA
+
+#finalizar-compra{
+    //texto
+    color: rgb(18, 18, 18);
+    font-size: 1rem;
+    font-weight: 600;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(213, 255, 47);
+    width: 11rem;
+    height: 2.3rem;
+    margin: 1rem;
+    
+    border-radius: 15px;
+    transition: all .2s ease-in-out;
+
+    &:hover{
+        background-color: greenyellow;
+
+    }
+}
+
+
+// ---------------  FINAL MODAL DE ALERTA DE FINALIZAR LA COMPRA
