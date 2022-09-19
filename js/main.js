@@ -121,6 +121,7 @@ botonVaciar.addEventListener('click', () => {
 
 })
 
+//ALERTA PARA FINALIZAR LA COMPRA
 finalizarCompra.addEventListener('click', () => {
 
   Swal.fire(
@@ -170,11 +171,6 @@ stockProductos.forEach((producto) => {
 
     //INTRODUCCION DEL HTML AL DOM:
     const boton = document.getElementById(`agregar${producto.id}`)
-    //Por cada elemento del array, se crea un div, lo cuelgo, le pongo un id particular, una vez colgado
-    //le hago un get element by id (el de agregar) Obtengo el elemento y a dicho elemento le agregamos
-    //el add event listener
-
-    //
 
     boton.addEventListener('click', () => {
         //esta funcion ejecuta el agregar el carrito con la id del producto
@@ -200,44 +196,36 @@ const agregarAlCarrito = (prodId) => {
     const existe = carrito.some (prod => prod.id === prodId) //comprobar si el elemento ya existe en el carrito
 
     if (existe){ //SI YA ESTÁ EN EL CARRITO, SE ACTUALIZA LA CANTIDAD
-        const prod = carrito.map (prod => { //creamos un nuevo arreglo e iteramos sobre cada curso y cuando
-            // map encuentre cual es el que igual al que está agregado, le suma la cantidad
+        const prod = carrito.map (prod => { 
             if (prod.id === prodId){
                 prod.cantidad++
             }
         })
     } else { //EN CASO DE QUE NO ESTÉ, AGREGAMOS EL CURSO AL CARRITO
         const item = stockProductos.find((prod) => prod.id === prodId)//Se trabaja con ID
-        //Una vez obtenida la ID, lo que haremos es hacerle un push para agregarlo al carrito
         carrito.push(item)
     }
-    //Va a buscar el item, agregarlo al carrito y llama a la funcion actualizarCarrito, que recorre
-    //el carrito y se ve.
+
     actualizarCarrito() 
 }
-//agregarAlCarrito(1) //Se pasa el ID por parametro. Se asigna como evento esta funcion al boton
-//con el id de su producto correspondiente
 
 
 const eliminarDelCarrito = (prodId) => {
     const item = carrito.find((prod) => prod.id === prodId)
 
-    const indice = carrito.indexOf(item) //Busca el elemento que le paso y nos devuelve su indice.
+    const indice = carrito.indexOf(item)
 
-    carrito.splice(indice, 1) //Se le pasa el indice del elemento ITEM y borramos 
-    // un elemento 
+    carrito.splice(indice, 1) 
+
     actualizarCarrito()
     console.log(carrito)
 }
 
 const actualizarCarrito = () => {
-    //LOS APPENDS SE VAN ACUMULANDO CON LO QUE HABIA ANTES
-    contenedorCarrito.innerHTML = "" //Cada vez que llame a actualizarCarrito, lo primero que hay que hacer
-    //es borrar el nodo. Y despues recorro el array lo actualizo de nuevo y lo rellena con la info
-    //actualizado
+    
+    contenedorCarrito.innerHTML = ""
     // AGREGAR AL MODAL. Se recorre sobre el array de carrito.
 
-    //Por cada producto se crea un div con esta estructura y se le hace un append al contenedorCarrito (el modal)
     carrito.forEach((prod) => {
         const div = document.createElement('div')
         div.className = ('productoEnCarrito')
@@ -254,7 +242,7 @@ const actualizarCarrito = () => {
 
     })
 
-    contadorCarrito.innerText = carrito.length // actualizamos con la longitud del carrito.
+    contadorCarrito.innerText = carrito.length // Actualizamos con la longitud del carrito.
     console.log(carrito)
     precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.cantidad * prod.precio, 0)
     //Por cada producto que se recorre en el carrito, al acumulador le suma la propiedad precio, con el acumulador
