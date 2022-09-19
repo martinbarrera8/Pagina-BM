@@ -178,7 +178,7 @@
 
 
 //Boton Si, vaciar
-.swal2-styled.swal2-confirm{
+button.swal2-styled.swal2-confirm{
     border: 1px solid red;
     background-color: white;
     border-radius: 20px;
@@ -198,7 +198,7 @@
 
 //Boton No, cancelar
 
-.swal2-styled.swal2-cancel{
+button.swal2-styled.swal2-cancel{
     border: 1px solid gray;
     background-color: white;
     border-radius: 20px;
@@ -215,11 +215,11 @@
     }
 }
 
-.swal2-styled.swal2-confirm:focus{
+button.swal2-styled.swal2-confirm:focus{
     box-shadow: none;
 }
 
-.swal2-styled.swal2-cancel:focus{
+button.swal2-styled.swal2-cancel:focus{
     box-shadow: none;
 }
 
